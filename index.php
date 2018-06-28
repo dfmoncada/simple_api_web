@@ -1,6 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
 
 if(!isset($_GET['api-key']) || $_GET['api-key'] != 'maiAPIkey'){
     echo json_encode(["response"=>"FAILED", "message"=>"the API key you entered was not correct"]);
